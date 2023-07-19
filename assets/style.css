@@ -73,7 +73,7 @@ body {
 }
 
 .picture img {
-	width: 100%;
+	width: 360px;
 }
 
 #about-me {
@@ -115,7 +115,7 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #8d8430;
 	border-radius: 0;
 }
 
@@ -401,5 +401,9 @@ input[type="submit"] {
 
 	.picture {
 		width: 80%;
+	}
+	
+	.picture img {
+		width: 280px;
 	}
 }
