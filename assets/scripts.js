@@ -1,15 +1,1 @@
-$(document).ready(function() {
-    $('.gallery').mauGallery({
-        columns: {
-            xs: 1,
-            sm: 2,
-            md: 3,
-            lg: 3,
-            xl: 3
-        },
-        lightBox: true,
-        lightboxId: 'myAwesomeLightbox',
-        showTags: true,
-        tagsPosition: 'top'
-    });
-});
+const e=[{image:"ryoji-iwata-wUZjnOv7t0g-unsplash.webp"},{image:"nicholas-green-nPz8akkUmDI-unsplash.webp"},{image:"edward-cisneros-3_h6-1NPDGw-unsplash.webp"}];function t(t,n){document.querySelector('[idx="'+n+'"]').classList.add("dot_selected"),document.querySelector('[idx="'+(0==t?0==n?e.length-1:n-1:n==e.length-1?0:n+1)+'"]').classList.remove("dot_selected")}document.addEventListener("DOMContentLoaded",(function(){const t=document.getElementById("banner");let n=document.createElement("img");n.classList.add("index"),n.src="./assets/images/slider/"+e[0].image,n.setAttribute("actual",0),n.setAttribute("id","img_banner"),console.log(e[0].image),t.appendChild(n),t.setAttribute("current",0),function(){const t=document.getElementById("dots");e.forEach(((e,n)=>{let s=document.createElement("DIV");s.classList.add("dot"),0==n&&s.classList.add("dot_selected"),s.setAttribute("idx",n),t.appendChild(s)}))}()})),document.getElementById("left_arrow").addEventListener("click",(function(){let n=document.getElementById("img_banner"),s=n.getAttribute("actual");s--,-1==s&&(s=e.length-1),n.src="./assets/images/slider/"+e[s].image,n.setAttribute("actual",s),t(1,s)})),document.getElementById("right_arrow").addEventListener("click",(function(){let n=document.getElementById("img_banner"),s=n.getAttribute("actual");s++,s==e.length&&(s=0),n.src="./assets/images/slider/"+e[s].image,n.setAttribute("actual",s),t(0,s)})),setInterval((function(){document.getElementById("right_arrow").click()}),5e3);
